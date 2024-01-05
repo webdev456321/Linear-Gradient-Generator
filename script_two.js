@@ -118,6 +118,14 @@ input2.addEventListener('click',()=>{
             var colour2=document.querySelectorAll('input')[5]
             var colour3=document.querySelectorAll('input')[6];
             var button2=document.querySelectorAll('button')[0];
+            var textbox_1=document.getElementsByTagName('input')[2];
+            var range1=document.querySelectorAll('input')[3];
+            colour1.value='#00ffff';
+            colour2.value='#0000ff';
+             range1.addEventListener('input',()=>{
+                textbox_1.value=range1.value+'deg';
+            })
+
             colour1.value='#00ffff';
             colour2.value='#0000ff';
             colour3.value='#d3fc0a';
