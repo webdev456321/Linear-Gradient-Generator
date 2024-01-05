@@ -105,19 +105,63 @@ input1.addEventListener('change',()=>{
 )
         
 input2.addEventListener('click',()=>{   
-            form2.innerHTML=`<form>
-            <input type='text' name='textbox' placeholder='Enter direction' style='width:50%;margin-left:20px;'>
-            <br>
-            <label for="customRange1" style='padding-right:10px;'>Degree range</label>
-            <input type="range"  id="customRange1" max=360 min=-360 style='margin-top:5px;'>
-            <button type="button">Submit</button>
-            <br>
-            <br>
-            <input type='color' name='colour1' class='edit3' disabled>
-            <input type='color' name='colour2' class='edit3' disabled>
-            <input type='color' name='colour3' class='edit3' disabled>
-            </form>`
-            b.innerHTML='Note:After Entering a specific direction or an angle, click on any palette and drag the circular pointer.<br>You can enter the degrees manually or use degree range';
+            
+    form2.textContent=''
+
+    const input3=document.createElement('input');
+    input3.setAttribute('type','text')
+    input3.setAttribute('name','textbox')
+    input3.setAttribute('placeholder','Enter direction')
+    input3.setAttribute('style',"width:50%;margin-left:20px;")
+    const br1=document.createElement('br')
+    form2.appendChild(input3)
+    form2.appendChild(br1)
+
+    const label1=document.createElement('label');
+    label1.setAttribute('for','customRange1')
+    label1.setAttribute('style','padding-right:10px;')
+    label1.textContent='Degree range'
+    form2.appendChild(label1)
+
+    const input4=document.createElement('input');
+    input4.setAttribute('type','range');
+    input4.setAttribute('id','customRange1')
+    input4.max=360
+    input4.min=-360
+    form2.appendChild(input4)
+
+    const button1=document.createElement('button');
+    button1.type='button'
+    button1.textContent='Submit'
+    button1.setAttribute('style','margin-left:5px;')
+    form2.appendChild(button1)
+
+    const br2=document.createElement('br')
+    const br3=document.createElement('br')
+    form2.appendChild(br2)
+    form2.appendChild(br3)
+
+    const input5=document.createElement('input')
+    input5.type='color'
+    input5.name='colour1'
+    input5.setAttribute('class','edit3')
+    input5.disabled=true
+    form2.appendChild(input5)
+
+    const input6=document.createElement('input')
+    input6.type='color'
+    input6.name='colour2'
+    input6.setAttribute('class','edit3')
+    input6.disabled=true
+    form2.appendChild(input6)
+    
+    const input7=document.createElement('input')
+    input7.type='color'
+    input7.name='colour3'
+    input7.setAttribute('class','edit3')
+    input7.disabled=true
+    form2.appendChild(input7)
+
             var textbox_1=document.getElementsByTagName('input')[2];
             var range1=document.querySelectorAll('input')[3];
             var colour1=document.querySelectorAll('input')[4];
