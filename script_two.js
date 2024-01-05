@@ -161,6 +161,9 @@ input2.addEventListener('click',()=>{
     input7.setAttribute('class','edit3')
     input7.disabled=true
     form2.appendChild(input7)
+                       
+            b.textContent=`Note:After Entering a specific direction or an angle, click on any palette and drag the circular pointer.
+            You can enter the degrees manually or use degree range`;
 
             var textbox_1=document.getElementsByTagName('input')[2];
             var range1=document.querySelectorAll('input')[3];
