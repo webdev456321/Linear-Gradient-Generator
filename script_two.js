@@ -6,7 +6,7 @@ var form2=document.getElementsByTagName('form')[1];
 var p_one=document.querySelectorAll('p')[0];
 var b=document.querySelectorAll('h5')[0];
 
-let afterClick=()=>{
+const afterClick=()=>{
             form2.textContent=''
             
             const input3=document.createElement('input');
@@ -60,7 +60,17 @@ let afterClick=()=>{
             You can enter the degrees manually or use degree range`;
 
 }
-
+const colourChange=()=>{
+                 colour1.addEventListener('input',()=>{
+                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
+                    p_one.textContent=body.style.background+';';
+                 })
+                
+                colour2.addEventListener('input',()=>{
+                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
+                    p_one.textContent=body.style.background+';';
+                 })
+}
 
 input1.addEventListener('click',()=>{  
             afterClick();
@@ -88,16 +98,7 @@ input1.addEventListener('click',()=>{
                 colour1.disabled=false;
                 colour2.disabled=false;
                 }
-                colour1.addEventListener('input',()=>{
-                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
-                    p_one.textContent=body.style.background+';';
-                 })
-                
-                colour2.addEventListener('input',()=>{
-                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
-                    p_one.textContent=body.style.background+';';
-                 })
-
+            colourChange();
             })
 
             }
@@ -145,16 +146,7 @@ input2.addEventListener('click',()=>{
                 colour2.disabled=false;
                 colour3.disabled=false;
                 }
-                colour1.addEventListener('input',()=>{
-                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value},${colour3.value})`;
-                    p_one.textContent=body.style.background+';';
-                 })
-                
-                
-                colour2.addEventListener('input',()=>{
-                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value},${colour3.value})`;
-                    p_one.textContent=body.style.background+';';
-                 })
+            colourChange();
                  colour3.addEventListener('input',()=>{
                     body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value},${colour3.value})`;
                     p_one.textContent=body.style.background+';';
