@@ -8,7 +8,7 @@ let b=document.querySelectorAll('h5')[0];
 
 
 
-input1.addEventListener('change',()=>{   
+input1.addEventListener('click',()=>{   
 
             form2.textContent=''
 
