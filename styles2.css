@@ -1,0 +1,85 @@
+#gradient{
+    font-family: sans-serif, cursive;
+    font-style:italic;
+    text-align:center;
+    text-transform:uppercase;
+    background: linear-gradient(to left,rgb(211, 252, 10),rgba(0, 0, 255,1),rgba(0, 255, 255,1));
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    margin-top:100px;
+
+}
+h1{
+    font-size:2.5em;
+    color:rgba(250, 13, 13,0.9);
+    width:100%;
+    letter-spacing:0.3em;
+
+}
+
+p{
+    font-size:2em;
+    grid-row:2;
+    color:rgb(250, 13, 250);
+
+}
+h1:hover{
+    transform:rotate(-720deg);
+    transition:2s;
+}
+h5{
+    align-self:center;
+    color:rgba(13, 250, 234, 1);
+}
+
+#one{
+    font-size:2em;
+}
+form{
+    margin-top:75px;
+}
+.mini{
+    margin-bottom:5px;
+}
+input{
+    border-radius:10px;
+    font-size:1.5em;
+    margin-top:10px;
+    background-color:rgb(174, 255, 0);
+
+}
+button{
+    border-radius:10px;
+    padding:15px;
+    margin-top:20px;
+    background-color:aquamarine;
+}
+button:hover{
+    background-color: rgb(138, 255, 127);
+    transition:2s;
+    transform:scale(1.1)
+}
+.edit1{
+    background-color:rgb(36, 255, 3);
+    padding-right:10px;
+    border-radius:20px;
+    margin-left:10px;
+    padding-bottom:80px;
+    margin-top:50px;
+    margin-right:10px;
+
+}
+.edit2{
+    grid-column-end:-1;
+}
+.edit3{
+    margin-left:10px;
+}
+.edit3:hover{
+    transition:2s;
+    transform:scale(1.1);
+}
+footer{
+    background:blue;
+    border-radius:10px;
+}
