@@ -58,29 +58,13 @@ const afterClick=()=>{
 
             b.textContent=`Note:After Entering a specific direction or an angle, click on any palette and drag the circular pointer.
             You can enter the degrees manually or use degree range`;
-            var textbox_1=document.getElementsByTagName('input')[2];
-            var range1=document.querySelectorAll('input')[3];
 
-             range1.addEventListener('input',()=>{
-                textbox_1.value=range1.value+'deg';
-            })
 
 
 }
 
 const colourChange=()=>{
-            var colour1=document.querySelectorAll('input')[4];
-            var colour2=document.querySelectorAll('input')[5]
 
-                 colour1.addEventListener('input',()=>{
-                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
-                    p_one.textContent=body.style.background+';';
-                 })
-                
-                colour2.addEventListener('input',()=>{
-                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
-                    p_one.textContent=body.style.background+';';
-                 })
 }
 
 input1.addEventListener('click',()=>{  
@@ -88,8 +72,14 @@ input1.addEventListener('click',()=>{
             var colour1=document.querySelectorAll('input')[4];
             var colour2=document.querySelectorAll('input')[5]
             var button2=document.querySelectorAll('button')[0];
+            var textbox_1=document.getElementsByTagName('input')[2];
+            var range1=document.querySelectorAll('input')[3];
             colour1.value='#00ffff';
             colour2.value='#0000ff';
+             range1.addEventListener('input',()=>{
+                textbox_1.value=range1.value+'deg';
+            })
+
             button2.addEventListener('click',()=>{
                 let value1=''
                 value1=value1+textbox_1.value
@@ -104,7 +94,15 @@ input1.addEventListener('click',()=>{
                 colour1.disabled=false;
                 colour2.disabled=false;
                 }
-            colourChange();
+                            colour1.addEventListener('input',()=>{
+                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
+                    p_one.textContent=body.style.background+';';
+                 })
+                
+                colour2.addEventListener('input',()=>{
+                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
+                    p_one.textContent=body.style.background+';';
+                 })
             })
 
             }
@@ -143,7 +141,15 @@ input2.addEventListener('click',()=>{
                 colour2.disabled=false;
                 colour3.disabled=false;
                 }
-            colourChange();
+            colour1.addEventListener('input',()=>{
+                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
+                    p_one.textContent=body.style.background+';';
+                 })
+                
+                colour2.addEventListener('input',()=>{
+                    body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
+                    p_one.textContent=body.style.background+';';
+                 })
                  colour3.addEventListener('input',()=>{
                     body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value},${colour3.value})`;
                     p_one.textContent=body.style.background+';';
