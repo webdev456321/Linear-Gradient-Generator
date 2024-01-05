@@ -58,9 +58,20 @@ const afterClick=()=>{
 
             b.textContent=`Note:After Entering a specific direction or an angle, click on any palette and drag the circular pointer.
             You can enter the degrees manually or use degree range`;
+            var textbox_1=document.getElementsByTagName('input')[2];
+            var range1=document.querySelectorAll('input')[3];
+
+             range1.addEventListener('input',()=>{
+                textbox_1.value=range1.value+'deg';
+            })
+
 
 }
+
 const colourChange=()=>{
+            var colour1=document.querySelectorAll('input')[4];
+            var colour2=document.querySelectorAll('input')[5]
+
                  colour1.addEventListener('input',()=>{
                     body.style.background=`linear-gradient(${value1},${colour1.value},${colour2.value})`;
                     p_one.textContent=body.style.background+';';
@@ -74,14 +85,9 @@ const colourChange=()=>{
 
 input1.addEventListener('click',()=>{  
             afterClick();
-            var textbox_1=document.getElementsByTagName('input')[2];
-            var range1=document.querySelectorAll('input')[3];
             var colour1=document.querySelectorAll('input')[4];
-            var colour2=document.querySelectorAll('input')[5];
+            var colour2=document.querySelectorAll('input')[5]
             var button2=document.querySelectorAll('button')[0];
-            range1.addEventListener('input',()=>{
-                textbox_1.value=range1.value+'deg';
-            })
             colour1.value='#00ffff';
             colour2.value='#0000ff';
             button2.addEventListener('click',()=>{
@@ -113,24 +119,15 @@ input2.addEventListener('click',()=>{
     input7.name='colour3'
     input7.setAttribute('class','edit3')
     input7.disabled=true
-    form2.appendChild(input7)
-                       
-            b.textContent=`Note:After Entering a specific direction or an angle, click on any palette and drag the circular pointer.
-            You can enter the degrees manually or use degree range`;
-
-            var textbox_1=document.getElementsByTagName('input')[2];
-            var range1=document.querySelectorAll('input')[3];
+    form2.appendChild(input7);
             var colour1=document.querySelectorAll('input')[4];
-            var colour2=document.querySelectorAll('input')[5];
+            var colour2=document.querySelectorAll('input')[5]
             var colour3=document.querySelectorAll('input')[6];
-            var button3=document.querySelectorAll('button')[0];
-            range1.addEventListener('input',()=>{
-                textbox_1.value=range1.value+'deg';
-            })
+            var button2=document.querySelectorAll('button')[0];
             colour1.value='#00ffff';
             colour2.value='#0000ff';
             colour3.value='#d3fc0a';
-            button3.addEventListener('click',()=>{
+            button2.addEventListener('click',()=>{
                 let value1=''
                 value1=value1+textbox_1.value
                 if(textbox_1.value===''){
