@@ -159,7 +159,4 @@ input2.addEventListener('click',()=>{
                     p_one.textContent=body.style.background+';';
                  })
             })
-
-                
-                
 })
