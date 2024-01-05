@@ -125,9 +125,6 @@ input2.addEventListener('click',()=>{
              range1.addEventListener('input',()=>{
                 textbox_1.value=range1.value+'deg';
             })
-
-            colour1.value='#00ffff';
-            colour2.value='#0000ff';
             colour3.value='#d3fc0a';
             button2.addEventListener('click',()=>{
                 let value1=''
