@@ -63,10 +63,6 @@ const afterClick=()=>{
 
 }
 
-const colourChange=()=>{
-
-}
-
 input1.addEventListener('click',()=>{  
             afterClick();
             var colour1=document.querySelectorAll('input')[4];
