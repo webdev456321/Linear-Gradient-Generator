@@ -22,7 +22,7 @@ p{
 
 }
 h1:hover{
-    transform:rotate(-720deg);
+    transform:scale(1.05);
     transition:2s;
 }
 h5{
